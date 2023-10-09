@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '19 13 * * 2'
+
+jobs:
+  build:
+    uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@security-checks
+    with:
+      runs-on: ubuntu-latest
+    secrets: inherit
