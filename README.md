@@ -6,7 +6,8 @@ demo of using repo rules to enforce seurity checks
 To ensure security scans are ran, you can use a combination of: 
 1. Reusable Workflows
 2. Repository Rulesets, and 
-3. Required Status Checks (with the name of the job in the reusable workflow like `security-checks / security-checks`)
+3. Required Status Checks, with the name of the job in the calling workflow and the name of the job in the reusable workflow separated by a space, forward slash, space
+   - For example:  `security-checks / security-checks`
 
 - To ensure certain workflows aren’t updated, use the Codeowners file
 Example: compliance-*.yml workflows are owned by the security team
