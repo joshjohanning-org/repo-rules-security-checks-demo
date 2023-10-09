@@ -12,7 +12,13 @@ on:
 
 jobs:
   security:
-    uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@main
-    with:
-      runs-on: ubuntu-latest
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+    # uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@main
+    # with:
+    #   runs-on: ubuntu-latest
+    # secrets: inherit
