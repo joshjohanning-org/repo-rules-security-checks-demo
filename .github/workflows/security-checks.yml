@@ -11,7 +11,7 @@ on:
     - cron: '19 13 * * 2'
 
 jobs:
-  security-checks:
+  security:
     uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@security-checks
     with:
       runs-on: ubuntu-latest
