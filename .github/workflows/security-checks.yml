@@ -12,7 +12,7 @@ on:
 
 jobs:
   security:
-    uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@main
+    uses: joshjohanning-org/reusable-workflows/.github/workflows/security-checks.yml@fail-security-checks
     with:
       runs-on: ubuntu-latest
     secrets: inherit
